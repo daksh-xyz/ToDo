@@ -6,8 +6,10 @@ class ToDoDatabase {
 
   void createInitialData() {
     toDoList = [
-      ["Hello! Welcome to my TO DO app", true],
-      ["Press the '+' to add a new task", true],
+      ["Hello! Welcome to my TO DO app", false],
+      ["Press the '+' to add a new task", false],
+      ["Long press an exisiting task to edit it", false],
+      ["Long press the '+' to clear the list! ", false],
     ];
   }
 
