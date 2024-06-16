@@ -3,6 +3,7 @@ import 'package:to_do/utility/my_button.dart';
 
 class DialogBox extends StatelessWidget {
   final controller;
+  final String hint;
   final VoidCallback onSave;
   final VoidCallback onCancel;
   const DialogBox({
@@ -10,6 +11,7 @@ class DialogBox extends StatelessWidget {
     required this.controller,
     required this.onCancel,
     required this.onSave,
+    required this.hint,
   });
 
   @override
@@ -26,9 +28,9 @@ class DialogBox extends StatelessWidget {
             children: [
               TextField(
                 controller: controller,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: "Add a new task",
+                decoration: InputDecoration(
+                  border: const OutlineInputBorder(),
+                  hintText: hint,
                 ),
               ),
               const SizedBox(

@@ -41,16 +41,20 @@ class ToDoTile extends StatelessWidget {
                 onChanged: onChanged,
                 activeColor: const Color.fromARGB(255, 59, 57, 57),
               ),
-              Text(
-                taskName,
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    decoration: taskCompleted
-                        ? TextDecoration.lineThrough
-                        : TextDecoration.none,
-                    decorationColor: Colors.white,
-                    decorationThickness: 2),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.55,
+                child: Text(
+                  taskName,
+                  overflow: TextOverflow.fade,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      decoration: taskCompleted
+                          ? TextDecoration.lineThrough
+                          : TextDecoration.none,
+                      decorationColor: Colors.white,
+                      decorationThickness: 2),
+                ),
               ),
             ],
           ),
